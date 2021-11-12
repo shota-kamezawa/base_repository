@@ -11,7 +11,6 @@ on:
     paths:
       - "src/**"
       - "!**.stories.js"
-      - "!**.mdx"
 
 jobs:
   ci:

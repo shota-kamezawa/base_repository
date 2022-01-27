@@ -3,11 +3,11 @@ name: trigger-sync
 on:
   pull_request:
     branches:
-      - 'epic-*'
+      - "epic-*"
     types:
       - closed
     paths:
-      - "src/app"
+      # - "src/app/**"
       - "!**.mdx"
       - "!**.mock.json"
       - "!**.stories.js"

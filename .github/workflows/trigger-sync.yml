@@ -7,11 +7,10 @@ on:
     types:
       - closed
     paths:
-      - "**"
-      # - "src/app/**"
-      # - "!**.mdx"
-      # - "!**.mock.json"
-      # - "!**.stories.js"
+      - "src/app/**"
+      - "!**.mdx"
+      - "!**.mock.json"
+      - "!**.stories.js"
 
 env:
   COPY_REPOSITORY: shota-kamezawa/copy_repository

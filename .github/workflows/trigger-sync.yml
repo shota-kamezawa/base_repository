@@ -30,5 +30,5 @@ jobs:
           curl -i -X POST \
             -H "Authorization: token ${{ secrets.SYNC_REPOSITORY }}" \
             -H "Content-Type: application/vnd.github.v3+json" \
-            -d '{"pr_number": ${{ github.event.pull_request.number }}}' \
+            -d '{ "inputs": { "pr_number": ${{ github.event.pull_request.number }} } }' \
             https://api.github.com/repos/${{ env.COPY_REPOSITORY }}/actions/workflows/${{ env.WORKFLOW_ID }}/dispatches

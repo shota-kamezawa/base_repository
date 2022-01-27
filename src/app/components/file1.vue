@@ -1,0 +1,12 @@
+<template>
+  <div>
+    <img
+      :src="require('@/app/assets/icons/dummy.svg')"
+      alt="dummy"
+    >
+    <img
+      :src="require('~/app/assets/icons/dummy.svg')"
+      alt="dummy"
+    >
+  </div>
+</template>

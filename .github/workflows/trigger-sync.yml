@@ -3,7 +3,7 @@ name: trigger-sync
 on:
   pull_request:
     branches:
-      - 'epic-*'
+      - 'epic-123'
     types:
       - closed
     paths:

@@ -16,7 +16,8 @@ on:
 
 env:
   COPY_REPOSITORY: shota-kamezawa/copy_repository
-  WORKFLOW_ID: sync.yml
+  COPY_REPOSITORY_WORKFLOW_ID: sync.yml
+  COPY_REPOSITORY_WORKFLOW_REF: main
 
 jobs:
   trigger-sync:
@@ -30,5 +31,5 @@ jobs:
           curl -i -X POST \
             -H "Authorization: token ${{ secrets.SYNC_REPOSITORY }}" \
             -H "Content-Type: application/vnd.github.v3+json" \
-            -d '{ "inputs": { "pr_number": ${{ github.event.pull_request.number }} } }' \
-            https://api.github.com/repos/${{ env.COPY_REPOSITORY }}/actions/workflows/${{ env.WORKFLOW_ID }}/dispatches
+            -d '{ "inputs": { "pr_number": "${{ github.event.pull_request.number }}", "ref": "${{ env.COPY_REPOSITORY_WORKFLOW_REF }}" } }' \
+            https://api.github.com/repos/${{ env.COPY_REPOSITORY }}/actions/workflows/${{ env.COPY_REPOSITORY_WORKFLOW_ID }}/dispatches

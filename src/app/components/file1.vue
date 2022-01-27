@@ -10,3 +10,13 @@
     >
   </div>
 </template>
+
+<script>
+import Dummy from '@/app/components/atoms/dummy';
+
+export default {
+  components: {
+    Dummy,
+  },
+};
+</script>
